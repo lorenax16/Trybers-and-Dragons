@@ -8,7 +8,7 @@ abstract class Race {
   }
 
   get name():string {
-    return this._name
+    return this._name;
   }
 
   get dexterity(): number {
@@ -16,13 +16,10 @@ abstract class Race {
   }
 
   static createdRacesInstances(): number {
-    throw new Error ('Not implemented');
+    throw new Error('Not implemented');
   }
 
-  abstract get maxLifePoints():{
-
-  }
-
+  abstract get maxLifePoints():number;
 }
 
 export default Race;
