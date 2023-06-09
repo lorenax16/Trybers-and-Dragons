@@ -75,8 +75,10 @@ export default class Character implements Fighter {
   }
 
   levelUp(): void {
+    // += porque ele precisa aumentar todas a suas habilidades cada vez que ele subir de nivel 
+    // cuando sube de nivel ele gera un novo valor aleatorio que e somado com o valor anterior
     this._maxLifePoints += getRandomInt(1, 10);
-    this._strength += getRandomInt(1, 10);
+    this._strength = this.strength + getRandomInt(1, 10);
     this._dexterity += getRandomInt(1, 10);
     this._defense += getRandomInt(1, 10);
     this._energy.amount = 10;
